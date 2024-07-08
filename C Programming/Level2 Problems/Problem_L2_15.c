@@ -1,5 +1,10 @@
 #include<stdio.h>
-#include<math.h>
+int power(int a,int b){
+    int y=1;
+    for(int i=1;i<=b;i++)
+    y=y*a;
+    return y;
+}
 //Faced Problems in digits for long examples due to rounding off issue 
 int main ()
 {
@@ -14,8 +19,8 @@ while(n/10!=0){
 }
 printf("DIgcount%d\n",dig_count);
 int last = x%10;
-int first = x/((int)pow(10,dig_count-1));
-int digits = ((x)-(first*(pow(10,dig_count-1))))/10;
+int first = x/((int)power(10,dig_count-1));
+int digits = ((x)-(first*(power(10,dig_count-1))))/10;
 printf("First%d\nLast%d\nDigits%d\nX%d\n",first,last,digits,x);
 if((x%2)==0)
 printf("%d",x);
