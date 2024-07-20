@@ -1,15 +1,9 @@
 #include<stdio.h>
 int main(){
-    int temp,dig=0,count=0;
-    for(int x=1;x<100000;x++){
-        count=0,temp=x;
-        while(temp>0){
-        dig = dig + (temp%10);
-        temp = temp/10;
-        }
-        if(dig=14);
-        count++;
-
+    int max;
+    for(int i=1000;i<=9999;i++){
+        if((i%63)==0)
+        max = i;
     }
-    printf("%d",count);
+    printf("%d",max);
 }
